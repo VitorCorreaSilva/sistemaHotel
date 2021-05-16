@@ -46,6 +46,9 @@ void Quarto::dadosQuarto(){
 	cout << "Ocupado: " << ocupado ? "Sim" : "Nao";
 	cout << "Tipo: " << tipoToString(getTipo());
 	cout << "Quantidade camas: " << camas.size() << endl;
+	cout << "===========================================";
+	listarCamas();
+	cout << "===========================================";
 }
 
 string Quarto::tipoToString(Tipo tipo){
@@ -61,5 +64,8 @@ string Quarto::tipoToString(Tipo tipo){
 
 void Quarto::listarCamas(){
 	int numeroCamas = camas.size();
-
+	for (int i = 0; i < numeroCamas; ++i)
+	{
+		camas[i].dadosCama();
+	}
 }

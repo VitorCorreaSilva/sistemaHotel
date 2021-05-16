@@ -13,3 +13,7 @@ string Cama::getTipoCama(){
 void Cama::setTipoCama(string tipoCama){
 	this->tipoCama = tipoCama;
 }
+
+void Cama::dadosCama(){
+	cout << "Tipo Cama: " << getTipoCama() << endl;
+}

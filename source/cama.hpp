@@ -10,4 +10,5 @@ class Cama{
 		Cama(string tipoCama);
 		string getTipoCama();
 		void setTipoCama(string cama);
+		void dadosCama();
 };

@@ -26,7 +26,7 @@ class Hotel{
 		void procurarCliente(int id);
 		void procurarCliente(string nome);
 
-		void adicionarQuarto(Quarto quarto);
+		void adicionarQuarto(int numero, int tipo, vector<Cama> camas);
 		void excluirQuarto(int numero);
 
 		void listarClientes();

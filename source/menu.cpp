@@ -39,7 +39,6 @@ void Menu::getMenuCliente(Hotel hotel){
 				cout << "Digite a idade do cliente: ";
 				cin >> id;
 				hotel.adicionarCliente(nome, id);
-				getchar();
 			break;
 			case 2:
 				cout << "Digite o ID do cliente: ";
@@ -74,8 +73,8 @@ void Menu::getMenuCliente(Hotel hotel){
 
 void Menu::getMenuQuarto(Hotel hotel){
 	int opcao;
-	string nome;
-	int id;
+	int numero, qntCamas, id;
+	string tipo;
 
 	system("clear");
 	while(opcao != 9){
@@ -91,6 +90,24 @@ void Menu::getMenuQuarto(Hotel hotel){
 		cin >> opcao;
 		switch(opcao){
 			case 1:
+				cout << "Digite o numero do quarto: ";
+				cin >> numero;
+				cout << "Escolha o tipo do quarto (0)Simples (1)Luxo: ";
+				cin >> id;
+				cout << "Digite a quantidade de camas: ";
+				cin >> qntCamas;
+				
+				vector<Cama> camas;
+				for (int i = 0; i < qntCamas; ++i)
+				{
+					cout << "Digite o tipo da cama " << i + 1 << ": ";
+					cin >> tipo;
+					Cama cama;
+					cama.setTipoCama(tipo);
+					camas.push_back(cama);
+				}
+				hotel.adicionarQuarto(numero, id, camas);
 			break;
 		}
+	}
 }
