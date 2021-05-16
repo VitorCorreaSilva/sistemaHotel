@@ -24,7 +24,7 @@ int main()
 				menu.getMenuCliente(hotel);
 				break;
 			case 2:
-
+				menu.getMenuQuarto(hotel);
 				break;
 		}
 

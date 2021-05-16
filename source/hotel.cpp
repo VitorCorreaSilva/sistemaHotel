@@ -80,6 +80,22 @@ void Hotel::procurarCliente(string nome){
 	}
 }
 
+void Hotel::adicionarQuarto(int numero, int tipo, vector<Cama> camas){
+	Tipo t = static_cast<Tipo>(tipo);
+	Quarto quarto(numero, false, t, camas);
+	quartos.push_back(quarto);
+}
+
+void Hotel::excluirQuarto(int numero){
+	int numeroQuartos = quartos.size();
+	for (int i = 0; i < numeroQuartos; ++i)
+	{
+		if(quartos[i].getNumero() == numero){
+			quartos.erase(quartos.begin() + i);
+		}
+	}
+}
+
 void Hotel::listarClientes(){
 	int numeroClientes = clientes.size();
 	cout << "========= Lista com os dados dos clientes =========" << endl;
